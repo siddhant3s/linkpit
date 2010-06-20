@@ -1,0 +1,23 @@
+RewriteEngine on
+#Uncomment the next line when on the remote server at X10hosting
+#RewriteBase /linkpit
+
+
+#Uncomment the next line when on the local server
+RewriteBase /
+
+
+
+RewriteRule ^login/(.+)$ ?openid_identifier=$1 [L,NC]
+
+RewriteCond %{REQUEST_URI} (css|js)/[^/]+\.(css|js)$
+RewriteRule (css|js)/([^/]+)\.(css|js)$ $1/$2.$3 [L]
+
+RewriteCond %{REQUEST_URI} images/[^/]+\.(gif|png|jpe?g|ico)$
+RewriteRule images/([^/]+)\.(gif|png|jpe?g|ico)$ images/$1.$2 [L]
+
+RewriteCond %{QUERY_STRING} !^request_url$
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php [L,QSA]
+
