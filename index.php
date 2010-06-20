@@ -139,7 +139,7 @@ require 'functions.php';
                                 You can copy-paste the following Linkpit URL and pass it on:<br>
                                 <input type='text' value='$FULLPATH$request_uri' readonly='true' size='30' style="border: 1px #000000 solid;  solid;text-align: center;
                                 font-family: Arial, Sans-Serif;font-size: 16px;background-color: #B1B1B1;padding: 5px;"><br>
-                                Opt the new way to pass URLs across chat rooms, Email and SMSs. Pass one  <b>[$request_uri]</b> and tell them about Linkpit, if they ask about the strange syntax!
+                                Opt the new way to pass URLs across chat rooms, Email and SMSs. Pass on <b>[$request_uri]</b> instead of passing http://linkpit.co.cc/$request_uri and tell them about Linkpit, if they ask about this strange syntax!
                                 <br> Refresh this page to go to the URL
                                 
 MSG;
