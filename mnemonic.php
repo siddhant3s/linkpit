@@ -16,7 +16,7 @@ for ($i=0; $i<$chars; $i++) {
 $pass .= $letters[$i % 4][array_rand($letters[$i % 4])];
 }
 
-$dirty_words = array('bob','con','cum','fod','fuc','fud','fuk','gal','gat','mal','mam','mar','mec','pat','peg','per','pic','pil','pit','put','rab','tar','tes','tet','tol','vac');
+$dirty_words = array('bob','con','cum','fod','fuc','fud','fuk','gal','gat','mal','mam','mar','mec','pat','peg','per','pic','pil','pit','put','rab','tar','tes','tet','tol','vac','images','js','css','Services');
 
 foreach ($dirty_words as $dirty_word) {
  if (strpos($pass, $dirty_word) !== false) {
