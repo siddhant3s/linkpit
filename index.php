@@ -5,7 +5,7 @@ $FULLPATH='http://'.$DOMAIN_NAME.$SUB_DIR;
 header('X-XRDS-Location:'.$FULLPATH.'yadis.xrdf');
 session_start();
 //complete path. One should be able to find $FULLPATH/index.php
-
+//
               
 //OpenID authentication
 try {
