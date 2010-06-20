@@ -1,0 +1,14 @@
+(*) Change the config.php according to your MYSQL configuration.
+(*) Run the linkpit.sql on your mysql client. This creates tables, required for
+Linkpit and also some sample data.
+(*) Enable mod_rewrite on your server.
+        On Ubuntu and similar debian distros, all you have to do is run
+        the following command on terminal"
+                sudo a2enmode rewrite
+        and restart apache by
+                sudo /etc/init.d/apache2 restart
+
+(*) Change the line about RewriteBase in .htaccess so that it points to your
+sub-directory, incase Linkpit is not hosted on webserver's root.
+
+
