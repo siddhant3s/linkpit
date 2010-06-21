@@ -133,14 +133,14 @@ require 'functions.php';
                                 {
                                 unset($_SESSION['newtag']);
                                 $message=<<<MSG
-                                Congratulations, your <a href="$url">URL</a> has now been linked to the tag: <a href="$FULLPATH$request_uri"><b><u>$request_uri</u></b></a> <br>
-                                You can now go to this URL by visiting <br>
-                                <b><a href="$FULLPATH$request_uri">$FULLPATH$request_uri</a><br></b>
-                                You can copy-paste the following Linkpit URL and pass it on:<br>
+                                Congratulations, your <a href="$url">URL</a> has now been linked to the tag: <a href="$FULLPATH$request_uri"><b><u>$request_uri</u></b></a> <br/>
+                                You can now go to this URL by visiting <br/>
+                                <b><a href="$FULLPATH$request_uri">$FULLPATH$request_uri</a><br/></b>
+                                You can copy-paste the following Linkpit URL and pass it on:<br/>
                                 <input type='text' value='$FULLPATH$request_uri' readonly='true' size='30' style="border: 1px #000000 solid;  solid;text-align: center;
-                                font-family: Arial, Sans-Serif;font-size: 16px;background-color: #B1B1B1;padding: 5px;"><br>
+                                font-family: Arial, Sans-Serif;font-size: 16px;background-color: #B1B1B1;padding: 5px;"><br/>
                                 Opt the new way to pass URLs across chat rooms, Email and SMSs. Pass on <b>[$request_uri]</b> instead of passing http://linkpit.co.cc/$request_uri and tell them about Linkpit, if they ask about this strange syntax!
-                                <br> Refresh this page to go to the URL
+                                <br/> Refresh this page to go to the URL
                                 
 MSG;
                                 
@@ -151,8 +151,8 @@ MSG;
                 else //tag not found
                         $message=<<<MSG
                          The tag you specified, <b><u>$request_uri</u></b> is not yet linked to any URL.
-                        That also mean that it is available and you can use it to link one of your URL.<br>
-                        Enter a URL you want to link to the tag <b><u>$request_uri</u></b><br><br><form name='linkurl'>
+                        That also mean that it is available and you can use it to link one of your URL.<br/>
+                        Enter a URL you want to link to the tag <b><u>$request_uri</u></b><br/><br/><form name='linkurl'>
                         <input name='url' type='text'   size='30' style="border: 1px #000000 solid;  solid;text-align: center;font-family: Arial, Sans-Serif;font-size: 16px;background-color: #B1B1B1;padding: 5px;" onkeydown="if (event.keyCode==13) {document.linkurl.url.click();}">
                         <input type='button' value='Link it!' onClick="parent.location='$FULLPATH$request_uri|'+document.linkurl.url.value" >
                         </form>
@@ -169,7 +169,7 @@ MSG;
                         header("Location: ".$FULLPATH.$tag);
                 }
                 else
-                        die('<br>An error occured, URL not registered');
+                        die('<br/>An error occured, URL not registered');
         }
         elseif( $tag_url=get_tag_url($request_uri))
         {
@@ -179,7 +179,7 @@ MSG;
                         header("Location: ".$FULLPATH.$tag);
                 }
                 else
-                         die('<br>An error occured, URL not registered');
+                         die('<br/>An error occured, URL not registered');
         }
         else
         {
@@ -199,8 +199,8 @@ $requested_url=$_GET['requested_url'];
 }
 ?>           
 
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -210,7 +210,7 @@ $requested_url=$_GET['requested_url'];
 <meta name="description" content="" />
 <link href="css/default.css" rel="stylesheet" type="text/css" media="screen" />
 	<!-- Simple OpenID Selector -->
-	<link rel="stylesheet" href="css/openid.css" />
+	<link rel="stylesheet" href="css/openid.css" type="text/css"  />
 	<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
 	<script type="text/javascript" src="js/openid-jquery.js"></script>
 	<script type="text/javascript">
@@ -266,7 +266,7 @@ $requested_url=$_GET['requested_url'];
 					</div>
 				</div>
 			</div>
-		</div><br>
+		</div><br/>
 	<?php } ?>	
 		<div class="post greenbox">
 				
@@ -279,13 +279,13 @@ $requested_url=$_GET['requested_url'];
 					This is <strong>Linkpit</strong>, a free, URL shortner. Linkpit not only make your URLs short, but easy to 
 					remember too. Each URL is transformed into a <i>tag</i>. To go to that URL, you just need to know it's 
 					corresponding tag. You can thus visit <?php echo($FULLPATH);?><u><i>tag</i></u> to reach to your URL.
-					<br><br>Linkpit generates a tag which can be pronounced easily and thus commited in memory if required. So all
+					<br/><br/>Linkpit generates a tag which can be pronounced easily and thus commited in memory if required. So all
 					you have to remember (or pass-on) is the tag and you will be able to access your long URL.
         				Linkpit also allow you to specify your own tag (if it's not already taken).
 					
 				
 			</div>
-<script>
+<script type="text/javascript">
 function toggle_show(id)
 {
         if(document.getElementById(id).style.display=='block')
@@ -297,18 +297,18 @@ function toggle_show(id)
 
 						<div class="entry">
 					
-					<a href="#" onclick="toggle_show('howto');" title="Click to Show/Hide">
-<h2>How to Use Linkpit</h2></a>
-<span id="howto" style="display: none;">
-						<h5>Simplest way to to use Linkpit</h5> To shorten a URL, just type the following on your browser address bar (and press Return Key):<br>
+					
+<h2><a href="#" onclick="toggle_show('howto');" title="Click to Show/Hide">How to Use Linkpit</a></h2>
+<div id="howto" style="display: none;">
+						<h5>Simplest way to to use Linkpit</h5> To shorten a URL, just type the following on your browser address bar (and press Return Key):<br/>
 						    <p align='center' style="border: 1px solid black; padding: 0px;margin: 2px 80px;"><b>    <?php echo $DOMAIN_NAME;?>/<i><u>your-url</u></i> </b></p>
 						<u>Example</u>:<p align='center' style="border: 1px solid black; padding: 0px;margin: 2px 80px;"> <?php echo $DOMAIN_NAME;?>/http://en.wikipedia.org/wiki/Random_walk   </p>
-						<br>
-						<h5>Shorten a URL to a specific tag of your choice</h5> Type the following on your browser address bar:<br>
+						<br/>
+						<h5>Shorten a URL to a specific tag of your choice</h5> Type the following on your browser address bar:<br/>
 						<p align='center' style="border: 1px solid black; padding: 0px;margin: 2px 80px;">    <b>   <?php echo $DOMAIN_NAME;?>/<i>a-tag|<u>your-url</u></i></b></p>
-						<u>Example:<p align='center' style="border: 1px solid black; padding: 0px;margin: 2px 80px;"></u> <?php echo $DOMAIN_NAME;?>/randwalk|http://en.wikipedia.org/wiki/Random_walk </p>
+						<u>Example:</u><p align='center' style="border: 1px solid black; padding: 0px;margin: 2px 80px;"> <?php echo $DOMAIN_NAME;?>/randwalk|http://en.wikipedia.org/wiki/Random_walk </p>
 						        
-</span>						
+</div>						
 					
 				
 				
@@ -324,7 +324,7 @@ function toggle_show(id)
 				</div>
 			</div>
 		</div>
-		<br>
+		<br/>
 		
 		
 		
@@ -334,7 +334,7 @@ function toggle_show(id)
 					<h2>Tag Search</h2>
 				</div>
 				<div class="content" >
-					<ul>Gives detailed statistics on your Tag with an easy to use search Box.<br><center>Coming Soon.</center></ul>
+					Gives detailed statistics on your Tag with an easy to use search Box.<br/><center>Coming Soon.</center>
 				</div>
 			</div>
 			<div class="columnB">
@@ -371,7 +371,7 @@ function toggle_show(id)
                         ?>
 <li>
 <!-- Simple OpenID Selector -->
-<form action="<?php echo $FULLPATH;?>" method="GET" id="openid_form">
+<form action="<?php echo $FULLPATH;?>" method="get" id="openid_form">
 	<input type="hidden" name="action" value="verify" />
 
 	
@@ -384,7 +384,7 @@ function toggle_show(id)
 			
 			<div id="openid_input_area">
 				<input id="openid_url" name="openid_url" type="text" value="http://" />
-				<br>
+				<br/>
 				<input id="openid_submit" type="submit" value="Sign-In"/>
 			</div>
 			<noscript>
@@ -431,7 +431,7 @@ LOGIN_MSG;
 				
 			
 			</ul>
-			<center>
+			</center>
 			</li>
 			<?php } ?>
 		</ul>
