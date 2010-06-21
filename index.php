@@ -152,9 +152,9 @@ MSG;
                         $message=<<<MSG
                          The tag you specified, <b><u>$request_uri</u></b> is not yet linked to any URL.
                         That also mean that it is available and you can use it to link one of your URL.<br/>
-                        Enter a URL you want to link to the tag <b><u>$request_uri</u></b><br/><br/><form name='linkurl'>
-                        <input name='url' type='text'   size='30' style="border: 1px #000000 solid;  solid;text-align: center;font-family: Arial, Sans-Serif;font-size: 16px;background-color: #B1B1B1;padding: 5px;" onkeydown="if (event.keyCode==13) {document.linkurl.url.click();}">
-                        <input type='button' value='Link it!' onClick="parent.location='$FULLPATH$request_uri|'+document.linkurl.url.value" >
+                        Enter a URL you want to link to the tag <b><u>$request_uri</u></b><br/><br/><form name='linkurl' action='#'>
+                        <input name='url' type='text'   size='30' style="border: 1px #000000 solid;  solid;text-align: center;font-family: Arial, Sans-Serif;font-size: 16px;background-color: #B1B1B1;padding: 5px;" onkeydown="if (event.keyCode==13) {document.linkurl.url.click();}" />
+                        <input type='button' value='Link it!' onclick="parent.location='$FULLPATH$request_uri|'+document.linkurl.url.value"/>
                         </form>
 MSG;
 
