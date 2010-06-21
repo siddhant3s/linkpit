@@ -133,12 +133,13 @@ require 'functions.php';
                                 {
                                 unset($_SESSION['newtag']);
                                 $message=<<<MSG
-                                Congratulations, your URL has now been linked to the tag: <a href="$FULLPATH$request_uri"><b><u>$request_uri</u></b></a> <br>
+                                Congratulations, your <a href="$url">URL</a> has now been linked to the tag: <a href="$FULLPATH$request_uri"><b><u>$request_uri</u></b></a> <br>
                                 You can now go to this URL by visiting <br>
                                 <b><a href="$FULLPATH$request_uri">$FULLPATH$request_uri</a><br></b>
                                 You can copy-paste the following Linkpit URL and pass it on:<br>
                                 <input type='text' value='$FULLPATH$request_uri' readonly='true' size='30' style="border: 1px #000000 solid;  solid;text-align: center;
-                                font-family: Arial, Sans-Serif;font-size: 16px;background-color: #B1B1B1;padding: 5px;">
+                                font-family: Arial, Sans-Serif;font-size: 16px;background-color: #B1B1B1;padding: 5px;"><br>
+                                Opt the new way to pass URLs across chat rooms, Email and SMSs. Pass on <b>[$request_uri]</b> instead of passing http://linkpit.co.cc/$request_uri and tell them about Linkpit, if they ask about this strange syntax!
                                 <br> Refresh this page to go to the URL
                                 
 MSG;
@@ -231,7 +232,7 @@ $requested_url=$_GET['requested_url'];
 	<div id="menu">
 		<ul>
 			<li class="current_page_item"><a href="<?php echo $FULLPATH; ?>">Homepage</a></li>
-			<li><a href="#">How does it works</a></li>
+			<li><a href="#">Why Linkpit</a></li>
 			<li><a href="#">Integration</a></li>
 			<li><a href="#">About Us</a></li>
 			<li><a href="#">Contact Us</a></li>
@@ -317,7 +318,7 @@ function toggle_show(id)
 				<div class="l">
 					<div class="r">
 						<p class="meta">
-							<a href="#" class="more">Read More</a> &nbsp;&nbsp;&nbsp; <a href="#" class="comments">Comments (33)</a>
+							<a href="#" class="more">Read More</a> &nbsp;&nbsp;&nbsp; <a href="#" class="comments">Comments </a>
 						</p>
 					</div>
 				</div>
@@ -342,11 +343,11 @@ function toggle_show(id)
 				</div>
 				<div class="content">
 					<ul>
-						<li><a href="#">Comming</a></li>
-						<li><a href="#">Soon</a></li>
-						<li><a href="#">on</a></li>
-						<li><a href="#">How to </a></li>
-						<li><a href="#">Use</a></li>
+						<li><a href="#">Additional</a></li>
+						<li><a href="#">Features</a></li>
+						<li><a href="#">Coming</a></li>
+						<li><a href="#">Soon </a></li>
+						<li><a href="#">Do</a></li>
 						<li><a href="#">LinkPit</a></li>
 					</ul>
 				</div>
