@@ -1,5 +1,5 @@
 <?php
-$DOMAIN_NAME=$_SERVER['SERVER_NAME']; //must end with a slash
+$DOMAIN_NAME=$_SERVER['SERVER_NAME']; //like linkpit.co.cc. leave untouched if not sure.
 $SUB_DIR = dirname($_SERVER['SCRIPT_NAME']); //could be dir1/dir2/dir3/linkpit. Leave blank if in root. Must end with a slash.
 
 
@@ -8,7 +8,7 @@ $MYSQL_USERNAME='siddhant_wp'; //Username
 $MYSQL_PASSWORD='linkpit';//password
 $MYSQL_DATABASE='siddhant_wp'; //name of your database
 
-$tag_length=6;
+$tag_length=6;// the default tag length
 
 /*table prefix. Need to change if you have Linkpit table name clashing with some
 other table name*/
