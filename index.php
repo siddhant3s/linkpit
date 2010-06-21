@@ -137,8 +137,8 @@ require 'functions.php';
                                 You can now go to this URL by visiting <br/>
                                 <b><a href="$FULLPATH$request_uri">$FULLPATH$request_uri</a><br/></b>
                                 You can copy-paste the following Linkpit URL and pass it on:<br/>
-                                <input type='text' value='$FULLPATH$request_uri' readonly='true' size='30' style="border: 1px #000000 solid;  solid;text-align: center;
-                                font-family: Arial, Sans-Serif;font-size: 16px;background-color: #B1B1B1;padding: 5px;"><br/>
+                                <input type='text' value='$FULLPATH$request_uri' size='30' style="border: 1px #000000 solid;  solid;text-align: center;
+                                font-family: Arial, Sans-Serif;font-size: 16px;background-color: #B1B1B1;padding: 5px;" readonly="readonly" /><br/>
                                 Opt the new way to pass URLs across chat rooms, Email and SMSs. Pass on <b>[$request_uri]</b> instead of passing http://linkpit.co.cc/$request_uri and tell them about Linkpit, if they ask about this strange syntax!
                                 <br/> Refresh this page to go to the URL
                                 
@@ -153,7 +153,7 @@ MSG;
                          The tag you specified, <b><u>$request_uri</u></b> is not yet linked to any URL.
                         That also mean that it is available and you can use it to link one of your URL.<br/>
                         Enter a URL you want to link to the tag <b><u>$request_uri</u></b><br/><br/><form name='linkurl' action='#'>
-                        <input name='url' type='text'   size='30' style="border: 1px #000000 solid;  solid;text-align: center;font-family: Arial, Sans-Serif;font-size: 16px;background-color: #B1B1B1;padding: 5px;" onkeydown="if (event.keyCode==13) {document.linkurl.url.click();}" />
+                        <input name='url' type='text'   size='30' style="border: 1px #000000 solid;  solid;text-align: center;font-family: 'Arial, Sans-Serif';font-size:16px;background-color: #B1B1B1;padding: 5px;" onkeydown="if (event.keyCode==13) {document.linkurl.url.click();}" />
                         <input type='button' value='Link it!' onclick="parent.location='$FULLPATH$request_uri|'+document.linkurl.url.value"/>
                         </form>
 MSG;
