@@ -21,7 +21,7 @@
               .append( "<a>" + 
               item.value.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)(" 
                           + $('#search').val()  + ")(?![^<>]*>)(?![^&;]+;)", "gi"), 
-                          "<b>$1</b>") + "</a>")  .   appendTo(ul);
+                          "<u><b>$1</b></u>") + "</a>")  .   appendTo(ul);
         };
 
     });
