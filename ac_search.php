@@ -14,7 +14,16 @@
         select: function(event, ui) {
           //
         }
-      });
+      })
+        .data("autocomplete")._renderItem = function(ul, item) {
+          return $("<li></li>")
+            .data("item.autocomplete", item)
+              .append( "<a>" + 
+              item.value.replace(new RegExp("(?![^&;]+;)(?!<[^<>]*)(" 
+                          + $('#search').val()  + ")(?![^<>]*>)(?![^&;]+;)", "gi"), 
+                          "<strong>$1</strong>") + "</a>")  .   appendTo(ul);
+        };
+
     });
   </script>
   </head>
