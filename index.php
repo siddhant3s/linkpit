@@ -211,7 +211,7 @@ $requested_url=$_GET['requested_url'];
 <link href="css/default.css" rel="stylesheet" type="text/css" media="screen" />
 	<!-- Simple OpenID Selector -->
 	<link rel="stylesheet" href="css/openid.css" type="text/css"  />
-	<script type="text/javascript" src="js/jquery-1.2.6.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="js/openid-jquery.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function() {
