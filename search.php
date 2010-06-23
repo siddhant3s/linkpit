@@ -8,7 +8,8 @@ if (!$q) return;
 $db = mysql_connect($MYSQL_HOST, $MYSQL_USERNAME, $MYSQL_PASSWORD)  or die("Error. Coudn't Connect to Database".mysql_error());
 mysql_select_db($MYSQL_DATABASE, $db) or die("Error. Coudn't Select the Database: ".mysql_error());
 
-$query = "SELECT tag FROM " . $MYSQL_TABLE_REDIRECTIONS . " WHERE tag LIKE " . "'%" . $q . "%' LIMIT 0, 15;";
+$query = "SELECT tag FROM " . $MYSQL_TABLE_REDIRECTIONS . " WHERE tag LIKE " . "'%" . $q . "%' ORDER BY LOCATE('$q',LCASE(tag)) LIMIT 0, 15;";
+//echo $query."<br>";
 $result = mysql_query($query, $db);
 
 if($result)
