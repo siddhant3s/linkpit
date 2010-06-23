@@ -9,6 +9,7 @@ $MYSQL_PASSWORD='linkpit';//password
 $MYSQL_DATABASE='siddhant_wp'; //name of your database
 
 $tag_length=6;// the default tag length
+$max_tag_length=16;//maximum tag length that can be specified by user
 
 /*table prefix. Need to change if you have Linkpit table name clashing with some
 other table name*/

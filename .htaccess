@@ -8,8 +8,6 @@ RewriteBase /
 
 
 
-RewriteRule ^login/(.+)$ ?openid_identifier=$1 [L,NC]
-
 RewriteCond %{REQUEST_URI} (css|js)/[^/]+\.(css|js)$
 RewriteRule (css|js)/([^/]+)\.(css|js)$ $1/$2.$3 [L]
 

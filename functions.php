@@ -18,8 +18,9 @@ global $tag_url_preg;
 function valid_tag($uri)
 {
 global $tag_pattern;
+global $max_tag_length;
         $tag_preg="/^$tag_pattern$/";
-        if(preg_match($tag_preg,$uri) && (strlen($uri)<=16))
+        if(preg_match($tag_preg,$uri) && (strlen($uri)<=$max_tag_length))
             return true;
         else
            return false;
