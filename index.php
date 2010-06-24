@@ -229,14 +229,17 @@ MSG;
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Linkpit</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<link href="css/default.css" rel="stylesheet" type="text/css" media="screen" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Linkpit</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <link href="css/default.css" rel="stylesheet" type="text/css" media="screen" />
 	<!-- Simple OpenID Selector -->
 	<link rel="stylesheet" href="css/openid.css" type="text/css"  />
-	<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+  <link type="text/css" href="css/jquery-ui-1.8.2-custom.css" rel="stylesheet" />
+  <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="js/jquery-ui-1.8.2.custom.min.js"></script>
+  <script type="text/javascript" src="js/ac_search.js"></script>
 	<script type="text/javascript" src="js/openid-jquery.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function() {
@@ -384,6 +387,17 @@ MSG;
 	<!-- start sidebar -->
 	<div id="sidebar">
 		<ul>
+		<li>
+			<h2>Search</h2>
+			<ul><li>
+			  <center>
+			    <div class="ui-widgets">
+            <input id="search" style="width: 100%; height: 25px; font-size: 16px;" />
+          </div>
+			  </center>
+			</ul></li>
+    </li>
+
 			<li>
 			<h2><?php echo ($logged_in)?"Welcome":"Login"; ?></h2>
 			<ul>
@@ -466,5 +480,12 @@ LOGIN_MSG;
 		&copy;2010 Siddhant Sanyam       All Rights Reserved. &nbsp;&bull;&nbsp; Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>
 	</p>
 </div>
+    <div id="search-info" title="Search Info">      
+      <p>
+        <h1 align="center" id="tag-name">TAG NAME</h1>
+        <h5 align="center" id="tag-url">URL</h5>
+        <h1 align="center" id="tag-hits">HITS</h1>
+      </p>
+    </div>
 </body>
 </html>
