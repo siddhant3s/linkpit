@@ -388,8 +388,13 @@ MSG;
 	<div id="sidebar">
 		<ul>
 		<li>
-			<h2>Search</h2>
-			<ul><li>
+			<h2>Tag Search</h2>
+			
+			<ul>
+			<li >
+					<center>Gives your Tag details with an easy to use search Box.<br/> Just type in few letters of your tag below:<center>
+				</li>
+			<li>
 			  <center>
 			    <div class="ui-widgets">
             <input id="search" style="width: 100%; height: 25px; font-size: 16px;" />
