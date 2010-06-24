@@ -9,14 +9,14 @@
     <script type="text/javascript">
     $(function() {
       $("#search").autocomplete({
-        source: "search.php",
+        source: "search.php?request=matches",
         minLength: 2,
         select: function(event, ui) {
           $("#tag-name").text(ui.item.value);
           $.ajax({
             type: "GET",
-            url: "search-info.php",
-            data: "term="+ui.item.value,
+            url: "search.php",
+            data: "term=" + ui.item.value + "& request=info",
             dataType: "json",
             success: function(data) {
               $("#tag-url").html('<a href="' + data[0] + '">' + data[0] + "</a>");
