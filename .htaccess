@@ -1,6 +1,6 @@
 RewriteEngine on
 
-#RewriteBase /
+RewriteBase /
 
 RewriteCond %{REQUEST_URI} (css|js)/[^/]+\.(css|js)$
 RewriteRule (css|js)/([^/]+)\.(css|js)$ $1/$2.$3 [L]
