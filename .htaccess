@@ -1,12 +1,6 @@
 RewriteEngine on
-#Uncomment the next line when on the remote server at X10hosting
-#RewriteBase /linkpit
 
-
-#Uncomment the next line when on the local server
-RewriteBase /
-
-
+#RewriteBase /
 
 RewriteCond %{REQUEST_URI} (css|js)/[^/]+\.(css|js)$
 RewriteRule (css|js)/([^/]+)\.(css|js)$ $1/$2.$3 [L]
