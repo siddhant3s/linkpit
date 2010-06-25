@@ -281,18 +281,18 @@ img.right {
 }
 
 
-/* purple Box */
+/* msg Box */
 
-.purplebox {
+.msgbox {
 	background: #FFFFFF url(images/img03_p.gif) repeat-x;
 }
 
-.purplebox .title {
+.msgbox .title {
 	height: 60px;
 	background: url(images/img04_p.gif) no-repeat;
 }
 
-.purplebox .title h1, .greenbox .title h2 {
+.msgbox .title h1, .greenbox .title h2 {
 	height: 35px;
 	margin: 0;
 	padding: 15px 0 0 20px;
@@ -304,7 +304,7 @@ img.right {
 	color: #FFFFFF;
 }
 
-.purplebox .entry {
+.msgbox .entry {
 	padding: 10px 20px 0 20px;
 	border-left: 1px solid #FFFFFF;
 	border-right: 1px solid #FFFFFF;
@@ -313,3 +313,37 @@ img.right {
 .btm { background: url(images/img06.gif) repeat-x left bottom; }
 .btm .l { background: url(images/img07.gif) no-repeat left bottom; }
 .btm .r { background: url(images/img08.gif) no-repeat right bottom; }
+/*End msgbox*/
+/* err Box */
+
+.errbox {
+	background: #FFFFFF url(images/img03_r.gif) repeat-x;
+}
+
+.errbox .title {
+	height: 60px;
+	background: url(images/img04_r.gif) no-repeat;
+}
+
+.errbox .title h1, .greenbox .title h2 {
+	height: 35px;
+	margin: 0;
+	padding: 15px 0 0 20px;
+	background: url(images/img05_r.gif) no-repeat right top;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-size: 1.6em;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.errbox .entry {
+	padding: 10px 20px 0 20px;
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+}
+
+.btm { background: url(images/img06.gif) repeat-x left bottom; }
+.btm .l { background: url(images/img07.gif) no-repeat left bottom; }
+.btm .r { background: url(images/img08.gif) no-repeat right bottom; }
+/*End errbox*/

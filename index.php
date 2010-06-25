@@ -43,13 +43,11 @@
       //OpenID authentication finalising when returning from the Provider's website
       if (isset($_GET['openid_mode'])) {
           //<-----This happens when the provider calls our page
-          if ($_GET['openid_mode'] == 'cancel') {
-              //<------either telling that user cancell the authentication.....
+          if ($_GET['openid_mode'] == 'cancel') {//<------either telling that user cancell the authentication.....
               /*TODO Have to log this error message instead of displaying it*/
               echo 'User has canceled authentication!';
               exit();
-          } else {
-              //<--------....or giving us all the required info that user passed authentication
+          } else {//<--------....or giving us all the required info that user passed authentication
               require_once 'class.dopeopenid.php';
               $openid_url = $_GET['openid_identity'];
               $openid = new Dope_OpenID($openid_url);
@@ -108,6 +106,11 @@
   /* the requested page is http://linkpit.co.cc/something then `something' is saved */
   /* in the $request_uri. Following script will serve the request based on this     */
   /* string.                                                                        */
+  /*                                                                                */
+  /* If $err_msg has any content, a coloured Red box will be shown with $err_msg    */
+  /* as the error message.                                                          */
+  /* If $message has any content, a coloured Purple box will be shown after (if     */
+  /* any) Error Box with $message as the message.                                   */
   /**********************************************************************************/
   //request URI to be the stuff after the website name
   $request_uri = explode($SUB_DIR, $_SERVER['REQUEST_URI'], 2);
@@ -206,7 +209,7 @@ MSG;
                   //the URL and tag was valid but some error occured. Contact the admin.
                   die('<br/>An error occured, URL not registered');
           } else {
-              $message = <<<MSG
+              $err_msg = <<<MSG
                 <div style="text-align: left;">
                 An error occured. You didn't used Linkpit in a syntax that it understand. This may be due to following reasons:
                 <ul>
@@ -272,8 +275,31 @@ MSG;
 <div id="page">
 	<!-- start content -->
 	<div id="content">
+	<!--Post an Error box(red) if $err_msg is set -->
+	<?php if(isset($err_msg)){ ?>
+		<div class="post errbox">
+				
+			<div class="title">
+				<h1>Error</h1>
+			</div>
+			<div class="entry">
+			  <center>
+					<?php echo $err_msg;?>
+			  </center>	
+			</div>
+			<div class="btm">
+				<div class="l">
+					<div class="r">
+						<p class="meta">
+							</p>
+					</div>
+				</div>
+			</div>
+		</div><br/>
+	<?php } ?>
+	<!--Post a Simple message box(purple) if $message is set -->
 	<?php if(isset($message)){ ?>
-		<div class="post purplebox">
+		<div class="post msgbox">
 				
 			<div class="title">
 				<h1>Message</h1>
@@ -292,7 +318,9 @@ MSG;
 				</div>
 			</div>
 		</div><br/>
-	<?php } ?>	
+	<?php } ?>
+	
+	<!--Post the Welcome green box -->		
 		<div class="post greenbox">
 				
 			<div class="title">
@@ -325,7 +353,7 @@ MSG;
         your browser address bar (and press Return Key):<br />
 
         <p align='center' style="border: 1px solid black; padding: 0px;margin: 2px 80px;">
-        <b><?php echo $DOMAIN_NAME;?>/<i><u>your-url</u></i></b></p><u>Example</u>:
+        <b><?php echo $DOMAIN_NAME;?>/<i><u>your-url</u></i></b></p><u>Example</u>:     
 
         <p align='center' style="border: 1px solid black; padding: 0px;margin: 2px 80px;">
         <?php echo $DOMAIN_NAME;?>/http://en.wikipedia.org/wiki/Random_walk</p><br />
@@ -357,10 +385,23 @@ MSG;
 		<div class="two-columns">
 			<div class="columnA" >
 				<div class="title red">
-					<h2>Tag Search</h2>
+					<h2>Did you know?</h2>
 				</div>
 				<div class="content" >
-					Gives detailed statistics on your Tag with an easy to use search Box.<br/><center>Coming Soon.</center>
+					<ul>You can Login to Linkpit, by directly visiting
+					<li><?php echo($FULLPATH);?>login/your-open-id-url</li>
+					<li><?php echo($FULLPATH);?>login/service-provider/username
+					        <ul>
+					        For example:
+					        <li><?php echo($FULLPATH);?>login/google</li>
+					        <li><?php echo($FULLPATH);?>login/yahoo</li>
+					        <li><?php echo($FULLPATH);?>login/blogger/{username}</li>
+					        <li><?php echo($FULLPATH);?>login/myopenid/{username}</li>
+					        </ul>
+					        
+					</li>
+					
+					</ul>
 				</div>
 			</div>
 			<div class="columnB">
