@@ -216,17 +216,14 @@ MSG;
                 <li>You didn't specified a valid tag name. A tag name is an 
                 alphanumeric string which can also have hyphens(-), underscores(_) and period(.) but no spaces whole length must not exceed $max_tag_length </li>
                 <li>The URL you specified might be invalid. Note that URL always start with <b>http://</b>, <b>ftp://</b> or similar protocol name</li>
-                <li>You may have not specified the tag, URL order properly. Note that it is tag|URL where the | is the vertical bar which is typed by pressing <Shift> and \ Key</li>
+                <li>You may have not specified the tag, URL order properly. Note that it is tag|URL where the | is the vertical bar which is typed by pressing &lt;Shift&gt; and \ Key</li>
                 </ul>
                 </div>    
 MSG;
           }
       }
       //End of Dispatcher
-?>           
-
-
-
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -387,22 +384,21 @@ MSG;
 				<div class="title red">
 					<h2>Did you know?</h2>
 				</div>
-				<div class="content" >
-					<ul>You can Login to Linkpit, by directly visiting
+				
+				<p align='center'>You can Login to Linkpit, by directly visiting</p>
+					<ul>
 					<li><?php echo($FULLPATH);?>login/your-open-id-url</li>
-					<li><?php echo($FULLPATH);?>login/service-provider/username
+					<li><?php echo($FULLPATH);?>login/service-provider/username<br/>
+					For example:
 					        <ul>
-					        For example:
 					        <li><?php echo($FULLPATH);?>login/google</li>
-					        <li><?php echo($FULLPATH);?>login/yahoo</li>
-					        <li><?php echo($FULLPATH);?>login/blogger/{username}</li>
 					        <li><?php echo($FULLPATH);?>login/myopenid/{username}</li>
 					        </ul>
 					        
 					</li>
-					
+					<li>You can Logout from your account by visiting <?php echo($FULLPATH);?>logout</li> 
 					</ul>
-				</div>
+				
 			</div>
 			<div class="columnB">
 				<div class="title blue">
@@ -432,17 +428,21 @@ MSG;
 			<h2>Tag Search</h2>
 			
 			<ul>
-			<li >
-					<center>Gives your Tag details with an easy to use search Box.<br/> Just type in few letters of your tag below:<center>
-				</li>
 			<li>
+					<center>Gives your Tag details with an easy to use search Box.<br/> Just type in few letters of your tag below:</center>
+				
 			  <center>
-			    <div class="ui-widgets">
-            <input id="search" style="width: 100%; height: 25px; font-size: 16px;" />
-          </div>
-			  </center>
-			</ul></li>
-    </li>
+			        <div class="ui-widgets">
+            <input id="search" style="border: 1px #000000 solid;  solid;text-align: center;font-family: 'Arial, Sans-Serif';font-size:16px;padding: 5px;" />
+                          
+                                </div>
+                          </center>
+                        
+                        </li>
+                        </ul>
+                
+          	
+                 </li>
 
 			<li>
 			<h2><?php echo ($logged_in)?"Welcome":"Login"; ?></h2>
@@ -526,7 +526,7 @@ LOGIN_MSG;
 		&copy;2010 Siddhant Sanyam       All Rights Reserved. &nbsp;&bull;&nbsp; Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>
 	</p>
 </div>
-    <div id="search-info" title="Search Info">      
+    <div id="search-info" title="Tag Information">      
       <p>
         <h1 align="center" id="tag-name">TAG NAME</h1>
         <h5 align="center" id="tag-url">URL</h5>
