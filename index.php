@@ -527,11 +527,11 @@ LOGIN_MSG;
 	</p>
 </div>
     <div id="search-info" title="Tag Information">      
-      <p>
+      <div>
         <h1 align="center" id="tag-name">TAG NAME</h1>
         <h5 align="center" id="tag-url">URL</h5>
         <h1 align="center" id="tag-hits">HITS</h1>
-      </p>
+      </div>
     </div>
 </body>
 </html>
