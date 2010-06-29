@@ -1,6 +1,9 @@
 RewriteEngine on
 
-#RewriteBase /
+#set the following line according to where the website is hosted
+#On local sytem, you can even try removing it since the system takes it to be 
+#the place of this .htaccess file by default
+RewriteBase /
 
 RewriteCond %{REQUEST_URI} (css|js)/[^/]+\.(css|js)$
 RewriteRule (css|js)/([^/]+)\.(css|js)$ $1/$2.$3 [L]
