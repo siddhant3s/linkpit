@@ -244,6 +244,11 @@ MSG;
 	<script type="text/javascript">
 	$(document).ready(function() {
 	    openid.init('openid_identifier');
+	    $('#show_howto').click(function(){
+	               
+                       $('#howto').toggle('clip');
+                       
+                       });
 	});
 	</script>
 	<!-- /Simple OpenID Selector -->
@@ -331,18 +336,10 @@ MSG;
 					you have to remember (or pass-on) is the tag and you will be able to access your long URL.
         	Linkpit also allow you to specify your own tag (if it's not already taken).
       </div>
-      <script type="text/javascript">
-      function toggle_show(id)
-      {
-          if(document.getElementById(id).style.display=='block')
-              document.getElementById(id).style.display='none';
-          else
-              document.getElementById(id).style.display='block';
-      }
-      </script>			
+		
 
    <div class="entry">
-      <h2><a href="#" onclick="toggle_show('howto');" title="Click to Show/Hide">How to Use
+      <h2><a href="#" title="Click to Show/Hide" id="show_howto">How to Use
       Linkpit</a></h2>
 
       <div id="howto" style="display: none;">
