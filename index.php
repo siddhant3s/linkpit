@@ -243,7 +243,7 @@ MSG;
 	<script type="text/javascript" src="js/openid-jquery.js"></script>
 	<script type="text/javascript">
 	
-	$(document).ready(function() {$("#btm").draggable();
+	$(document).ready(function() {
 	    openid.init('openid_identifier');
 	    $('#show_howto').click(function(){
 	               
