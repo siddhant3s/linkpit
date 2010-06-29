@@ -1,6 +1,6 @@
 <?php
 $DOMAIN_NAME=$_SERVER['SERVER_NAME']; //like linkpit.co.cc. leave untouched if not sure.
-$SUB_DIR = dirname($_SERVER['SCRIPT_NAME']); //could be dir1/dir2/dir3/linkpit. Leave blank if in root. Must end with a slash.
+$SUB_DIR = (dirname($_SERVER['SCRIPT_NAME'])=='/')?'/':dirname($_SERVER['SCRIPT_NAME']).'/'; //could be dir1/dir2/dir3/linkpit. Leave blank if in root. Must end with a slash.
 
 
 $MYSQL_HOST='localhost'; //Database hostname

@@ -242,7 +242,8 @@ MSG;
   <script type="text/javascript" src="js/ac_search.js"></script>
 	<script type="text/javascript" src="js/openid-jquery.js"></script>
 	<script type="text/javascript">
-	$(document).ready(function() {
+	
+	$(document).ready(function() {$("#btm").draggable();
 	    openid.init('openid_identifier');
 	    $('#show_howto').click(function(){
 	               
@@ -256,7 +257,7 @@ MSG;
 <body>
 <!-- start header -->
 <div id="header">
-	<div id="logo">
+	<div id="logo" class="logo">
 		<h1>Linkpit</h1>
 		<p>
 			URL shortner with a difference
@@ -281,7 +282,7 @@ MSG;
 	<?php if(isset($err_msg)){ ?>
 		<div class="post errbox">
 				
-			<div class="title">
+			<div class="title" >
 				<h1>Error</h1>
 			</div>
 			<div class="entry">
