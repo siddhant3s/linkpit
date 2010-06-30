@@ -4,15 +4,6 @@ RewriteEngine on
 #On local sytem, you can even try removing it since the system takes it to be 
 #the place of this .htaccess file by default
 RewriteBase /
-
-RewriteCond %{REQUEST_URI} (css|js)/[^/]+\.(css|js)$
-RewriteRule (css|js)/([^/]+)\.(css|js)$ $1/$2.$3 [L]
-
-RewriteCond %{REQUEST_URI} images/[^/]+\.(gif|png|jpe?g|ico)$
-RewriteRule images/([^/]+)\.(gif|png|jpe?g|ico)$ images/$1.$2 [L]
-
-RewriteCond %{QUERY_STRING} !^request_url$
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+)$ index.php [L,QSA]
-

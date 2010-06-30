@@ -8,7 +8,7 @@ Released for free under a Creative Commons Attribution 2.5 License
 body {
 	margin: 0;
 	padding: 0;
-	background: #C3C3C3 url(images/img01.gif) repeat-x;
+	background: #C3C3C3 url(../images/img01.gif) repeat-x;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 13px;
 	color: #666666;
@@ -103,7 +103,7 @@ img.right {
 }
 
 #menu .current_page_item a {
-	background: #C3C3C3 url(images/img02.gif) repeat-x;
+	background: #C3C3C3 url(../images/img02.gif) repeat-x;
 }
 
 /* Page */
@@ -139,12 +139,12 @@ img.right {
 
 .meta .more {
 	padding-left: 12px;
-	background: url(images/img09.gif) no-repeat left center;
+	background: url(../images/img09.gif) no-repeat left center;
 }
 
 .meta .comments {
 	padding-left: 15px;
-	background: url(images/img10.gif) no-repeat left center;
+	background: url(../images/img10.gif) no-repeat left center;
 }
 
 /* Sidebar */
@@ -166,7 +166,7 @@ img.right {
 #sidebar li ul {
 	margin-bottom: 10px;
 	padding-bottom: 10px;
-	background: #FFFFFF url(images/img16.gif) no-repeat left bottom;
+	background: #FFFFFF url(../images/img16.gif) no-repeat left bottom;
 }
 
 #sidebar li li {
@@ -182,7 +182,7 @@ img.right {
 	height: 53px;
 	margin: 0;
 	padding: 15px 0 0 20px;
-	background: url(images/img15.gif) no-repeat;
+	background: url(../images/img15.gif) no-repeat;
 	text-transform: uppercase;
 	letter-spacing: -1px;
 	font-size: 1.6em;
@@ -193,19 +193,19 @@ img.right {
 /* Green Box */
 
 .greenbox {
-	background: #FFFFFF url(images/img03.gif) repeat-x;
+	background: #FFFFFF url(../images/img03.gif) repeat-x;
 }
 
 .greenbox .title {
 	height: 60px;
-	background: url(images/img04.gif) no-repeat;
+	background: url(../images/img04.gif) no-repeat;
 }
 
 .greenbox .title h1, .greenbox .title h2 {
 	height: 35px;
 	margin: 0;
 	padding: 15px 0 0 20px;
-	background: url(images/img05.gif) no-repeat right top;
+	background: url(../images/img05.gif) no-repeat right top;
 	text-transform: uppercase;
 	letter-spacing: -1px;
 	font-size: 1.6em;
@@ -219,15 +219,15 @@ img.right {
 	border-right: 1px solid #FFFFFF;
 }
 
-.btm { background: url(images/img06.gif) repeat-x left bottom; }
-.btm .l { background: url(images/img07.gif) no-repeat left bottom; }
-.btm .r { background: url(images/img08.gif) no-repeat right bottom; }
+.btm { background: url(../images/img06.gif) repeat-x left bottom; }
+.btm .l { background: url(../images/img07.gif) no-repeat left bottom; }
+.btm .r { background: url(../images/img08.gif) no-repeat right bottom; }
 
 /* Two Columns */
 
 .two-columns {
 	clear: both;
-	background: url(images/img11.gif) repeat-y;
+	background: url(../images/img11.gif) repeat-y;
 	border-top: 10px solid #C3C3C3;
 }
 
@@ -246,11 +246,11 @@ img.right {
 }
 
 .two-columns .blue {
-	background: url(images/img13.gif) no-repeat;
+	background: url(../images/img13.gif) no-repeat;
 }
 
 .two-columns .red {
-	background: url(images/img14.gif) no-repeat;
+	background: url(../images/img14.gif) no-repeat;
 }
 
 .two-columns .columnA, .two-columns .columnB {
@@ -267,7 +267,7 @@ img.right {
 
 .two-columns .btm {
 	clear: both;
-	background: url(images/img12.gif) no-repeat left bottom;
+	background: url(../images/img12.gif) no-repeat left bottom;
 }
 
 /* Footer */
@@ -275,7 +275,7 @@ img.right {
 #footer {
 	clear: both;
 	padding: 30px 0;
-	background: #FFFFFF url(images/img02.gif) repeat-x;
+	background: #FFFFFF url(../images/img02.gif) repeat-x;
 	text-align: center;
 	font-size: smaller;
 }
@@ -284,19 +284,19 @@ img.right {
 /* msg Box */
 
 .msgbox {
-	background: #FFFFFF url(images/img03_p.gif) repeat-x;
+	background: #FFFFFF url(../images/img03_p.gif) repeat-x;
 }
 
 .msgbox .title {
 	height: 60px;
-	background: url(images/img04_p.gif) no-repeat;
+	background: url(../images/img04_p.gif) no-repeat;
 }
 
 .msgbox .title h1, .greenbox .title h2 {
 	height: 35px;
 	margin: 0;
 	padding: 15px 0 0 20px;
-	background: url(images/img05_p.gif) no-repeat right top;
+	background: url(../images/img05_p.gif) no-repeat right top;
 	text-transform: uppercase;
 	letter-spacing: -1px;
 	font-size: 1.6em;
@@ -310,26 +310,26 @@ img.right {
 	border-right: 1px solid #FFFFFF;
 }
 
-.btm { background: url(images/img06.gif) repeat-x left bottom; }
-.btm .l { background: url(images/img07.gif) no-repeat left bottom; }
-.btm .r { background: url(images/img08.gif) no-repeat right bottom; }
+.btm { background: url(../images/img06.gif) repeat-x left bottom; }
+.btm .l { background: url(../images/img07.gif) no-repeat left bottom; }
+.btm .r { background: url(../images/img08.gif) no-repeat right bottom; }
 /*End msgbox*/
 /* err Box */
 
 .errbox {
-	background: #FFFFFF url(images/img03_r.gif) repeat-x;
+	background: #FFFFFF url(../images/img03_r.gif) repeat-x;
 }
 
 .errbox .title {
 	height: 60px;
-	background: url(images/img04_r.gif) no-repeat;
+	background: url(../images/img04_r.gif) no-repeat;
 }
 
 .errbox .title h1, .greenbox .title h2 {
 	height: 35px;
 	margin: 0;
 	padding: 15px 0 0 20px;
-	background: url(images/img05_r.gif) no-repeat right top;
+	background: url(../images/img05_r.gif) no-repeat right top;
 	text-transform: uppercase;
 	letter-spacing: -1px;
 	font-size: 1.6em;
@@ -343,7 +343,7 @@ img.right {
 	border-right: 1px solid #FFFFFF;
 }
 
-.btm { background: url(images/img06.gif) repeat-x left bottom; }
-.btm .l { background: url(images/img07.gif) no-repeat left bottom; }
-.btm .r { background: url(images/img08.gif) no-repeat right bottom; }
+.btm { background: url(../images/img06.gif) repeat-x left bottom; }
+.btm .l { background: url(../images/img07.gif) no-repeat left bottom; }
+.btm .r { background: url(../images/img08.gif) no-repeat right bottom; }
 /*End errbox*/
