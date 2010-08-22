@@ -1,4 +1,7 @@
 <?php
+/*Generate a random tag with '$chars' alphabet characters in it, and '$numbers' digits.
+'$dirty_words' contains words that must not appear in a generated tag.*/
+
 function mnemonic($chars,$numbers) {
 $letters = array(
 0 => array('q','w','r','g','f','d','s','z','x','c','v'),
